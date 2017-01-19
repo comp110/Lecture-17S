@@ -7,15 +7,15 @@ public class UserInput {
   public static void main(String[] args) {
     Console console = new Console("User Input");
 
-    int age; // Declaration
-    age = 10; // Initialization
+    int age; // Variable Declaration
+    age = 10; // Variable Initialization
 
     console.print("You are");
-    console.print(age);
+    console.print(age); // Variable Reference
     
-    int yearsUntil100 = 100 - age;
+    int yearsUntil100 = 100 - age; // Variable Declaration & Initialization
     console.print("You will be 100 in");
-    console.print(yearsUntil100);
+    console.print(yearsUntil100); // Variable Reference
     console.print("years");
   }
 
