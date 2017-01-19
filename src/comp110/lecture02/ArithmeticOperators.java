@@ -2,14 +2,12 @@ package comp110.lecture02;
 
 import comp110.Console;
 
-public class IntegerExpressions {
+public class ArithmeticOperators {
 
   public static void main(String[] args) {
     Console console = new Console("Integer Expressions");
     // Let's slow down output so it's easier to follow...
     console.speed(0.5);
-
-    int age = console.promptInt("How old are you?");
 
     int x = console.promptInt("Enter a value for x");
     int y = console.promptInt("Enter a value for y");

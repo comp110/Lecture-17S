@@ -9,17 +9,16 @@ public class CustomMemeText {
 
     Console console = new Console("Custom Meme Text Demo");
 
-    // TODO: Use the console to prompt for each String
-    String topText = "";
-    String bottomText = "";
-
     MemePhoto meme = new MemePhoto();
     meme.setImageUrl("http://i.imgur.com/sjCYBBO.jpg");
 
-    // TODO: Replace the empty quotes with the variables
-    // topText and bottomText
-    meme.setTopText("");
-    meme.setBottomText("");
+    // TODO: Prompt for a String and assign to topText variable.
+    String topText = "replace this String";
+    meme.setTopText(topText);
+    
+    // TODO: Prompt for a String and assign to bottomText variable.
+    String bottomText = "replace this String, too";
+    meme.setBottomText(bottomText);
 
   }
 

@@ -7,20 +7,16 @@ public class UserInput {
   public static void main(String[] args) {
     Console console = new Console("User Input");
 
-    int x;
-    double y;
-    String z;
+    int age; // Declaration
+    age = 10; // Initialization
 
-    // TODO: Prompt user for values
-    x = console.promptInt();
-    y = console.promptDouble();
-    z = console.promptString();
-
-    console.print("You entered: ");
-    console.print(x);
-    console.print(y);
-    console.print(z);
-
+    console.print("You are");
+    console.print(age);
+    
+    int yearsUntil100 = 100 - age;
+    console.print("You will be 100 in");
+    console.print(yearsUntil100);
+    console.print("years");
   }
 
 }

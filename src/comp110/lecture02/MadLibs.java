@@ -6,7 +6,7 @@ public class MadLibs {
 
   public static void main(String[] args) {
 
-    Console console = new Console("Madlibs App");
+    Console console = new Console("MadLibs Demo");
 
     String positiveAdj = console.promptString("Give me a positive adjective");
     String negativeAdj = console.promptString("Give me a negative adjective");
@@ -15,11 +15,9 @@ public class MadLibs {
     int uncScore = console.promptInt("Give me a large number");
     int dookScore = console.promptInt("Give me a small number");
 
-    // TODO: compute how many points UNC will win by
-    int winBy = 0;
+    int winBy = uncScore - dookScore;
 
-    String madlibs = "On February 9th, I am going to " + verb + " the first COMP110 midterm.";
-    madlibs = madlibs + " Also on that day, the " + positiveAdj + " UNC basketball team";
+    String madlibs = "On February 9th, the " + positiveAdj + " UNC basketball team";
     madlibs = madlibs + " is going to " + verb + " the " + negativeAdj + " Dook team";
     madlibs = madlibs + " and win by " + winBy + " points!";
 
