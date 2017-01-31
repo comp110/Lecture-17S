@@ -4,7 +4,7 @@ import java.util.Random;
 
 import comp110.Console;
 
-public class Magic8BallFinal {
+public class Magic8Ball_2 {
 
   public static void main(String[] args) {
 
@@ -20,10 +20,7 @@ public class Magic8BallFinal {
 
       int n = console.promptInt("How many shakes?");
       int i = 0;
-      while (i < n) {
-        console.print("Shaking...");
-        i = i + 1;
-      }
+      // TODO: Print "Shaking..." n times
 
       int answer = random.nextInt(5);
       if (answer == 0) {
