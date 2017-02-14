@@ -2,18 +2,20 @@ package comp110.lecture09;
 
 public class AreYouMyLover {
 
-	public static void main(String[] args) {
-		Console console = new Console("Are you my lover?");
-		console.speed(0.5);
+  public static void main(String[] args) {
+    Console console = new Console("Are you my lover?");
+    console.speed(0.5);
 
-		while (true) {
+    while (true) {
 
-			console.alert("Are you my lover? Enter your info to find out!");
-			LoverProfile maybae = new LoverProfile();
+      console.alert("r u my lover? Make a profile to find out!");
 
-			console.print("Welcome " + maybae.getName());
+      // TODO: Construct a Profile
 
-		}
+      // TODO: Print "Hi " + <object>.getName()
 
-	}
+      // TODO: Test if Lover
+
+    }
+  }
 }
