@@ -16,10 +16,6 @@ public class Point {
 	}
 
 	// TODO: add a constructor with parameters
-	public Point(double x, double y) {
-		_x = y;
-		_y = y;
-	}
 
 	// Methods
 	public double getX() {
@@ -42,6 +38,13 @@ public class Point {
 		} else {
 			return 0;
 		}
+	}
+
+	public double maximum() {
+		if (_x > _y) {
+			return _x;
+		}
+		return _y;
 	}
 
 	public String toString() {

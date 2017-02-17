@@ -2,26 +2,27 @@ package comp110.lecture10;
 
 public class Path {
 
+	// Fields
 	private Point[] _points;
 
+	// Constructor
 	public Path(Point[] points) {
 		_points = points;
 	}
 
+	// Methods
 	public Point getHighestPoint() {
-		// TODO: Implement Algorithm
-		Point highest = _points[0];
+		Point max = _points[0];
 		for (int i = 1; i < _points.length; i++) {
-			Point point = _points[i];
-			if (point.getY() > highest.getY()) {
-				highest = point;
+			Point next = _points[i];
+			if (next.getY() > max.getY()) {
+				max = next;
 			}
 		}
-		return highest;
+		return max;
 	}
 
 	public boolean isInQuadrant(int quadrant) {
-		// TODO: Implement Algorithm
 		for (int i = 0; i < _points.length; i++) {
 			Point point = _points[i];
 			if (point.getQuadrant() != quadrant) {

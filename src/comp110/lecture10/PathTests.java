@@ -8,10 +8,11 @@ public class PathTests {
 
 		Console console = new Console();
 
-		Point a = new Point(1.0, 1.0);
-		Point b = new Point(2.0, 1.0);
-		Point c = new Point(3.0, 2.0);
-		Point d = new Point(4.0, 1.0);
+		// TODO: Add parameters to these points
+		Point a = new Point();
+		Point b = new Point();
+		Point c = new Point();
+		Point d = new Point();
 		Point[] sample = new Point[] { a, b, c, d };
 
 		Path path = new Path(sample);
