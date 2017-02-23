@@ -2,7 +2,6 @@ package comp110.lecture12;
 
 import javafx.scene.Group;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.MoveTo;
 import javafx.scene.shape.Path;
@@ -50,8 +49,7 @@ public class Flower {
 	public Group getShapes() {
 		Group shapes = new Group();
 
-		// TODO: add a stem
-		// shapes.getChildren().add(this.makeStem());
+		shapes.getChildren().add(this.makeStem());
 
 		// Add petals
 		for (int i = 0; i < _petals / 2; i++) {
@@ -61,7 +59,6 @@ public class Flower {
 		}
 
 		// TODO: Add the stamen
-		// shapes.getChildren().add(this.makeStamen());
 
 		// Move the group along the x axis based on the _x field
 		shapes.setTranslateX(_x);
@@ -70,11 +67,6 @@ public class Flower {
 	}
 
 	// TODO: declare and define a makeStamen method
-	public Circle makeStamen() {
-		Circle stamen = new Circle();
-		stamen.setRadius(10.0);
-		return stamen;
-	}
 
 	public Ellipse makePetal() {
 		Ellipse petal = new Ellipse();

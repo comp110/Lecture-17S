@@ -6,26 +6,18 @@ public class Human {
 	private int _pushups;
 
 	public Human() {
-		_name = "???";
+		_name = "No name";
 		_pushups = 0;
 	}
 
-	public String getName() {
-		return _name;
-	}
-
-	public void setName(String name) {
-		_name = name;
-	}
+	// TODO: Add getter and setter for _name field here
 
 	public int getPushups() {
 		return _pushups;
 	}
 
 	public void doPushups(int n) {
-		for (int i = 0; i < n; i++) {
-			this.pushup();
-		}
+		// TODO: implement this method
 	}
 
 	public void pushup() {
