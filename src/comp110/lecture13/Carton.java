@@ -5,59 +5,56 @@ import javafx.scene.shape.Circle;
 
 public class Carton {
 
-    private Egg[] _eggs;
+	private Egg[] _eggs;
 
-    public Carton() {
-        _eggs = new Egg[12];
-        for (int i = 0; i < _eggs.length; i++) {
-            _eggs[i] = new Egg();
-        }
-    }
+	public Carton() {
+		_eggs = new Egg[12];
 
-    public int size() {
-        return _eggs.length;
-    }
+		// TODO: Initialize our _eggs!
 
-    // Take an egg out of the carton
-    public Egg takeEgg(int i) {
-        Egg selected = _eggs[i];
-        _eggs[i] = null;
-        return selected;
-    }
+	}
 
-    public void setEgg(int i, Egg egg) {
-        _eggs[i] = egg;
-    }
+	public int size() {
+		return _eggs.length;
+	}
 
-    public int remaining() {
-        int count = 0;
-        for (int i = 0; i < _eggs.length; i++) {
-            if (_eggs[i] != null) {
-                count++;
-            }
-        }
-        return count;
-    }
+	// Take an egg out of the carton
+	public Egg takeEgg(int i) {
+		Egg selected = _eggs[i];
+		_eggs[i] = null;
+		return selected;
+	}
 
-    public Group getShapes() {
-        Group eggs = new Group();
+	public void setEgg(int i, Egg egg) {
+		_eggs[i] = egg;
+	}
 
-        for (int i = 0; i < _eggs.length; i++) {
-            if (_eggs[i] != null) {
-                Circle shape = _eggs[i].getShape();
-                double x = (i % 6) * (2 * shape.getRadius() + 10.0);
-                double y = 0.0;
-                if (i > 5) {
-                    y = 2 * (shape.getRadius() + 10);
-                }
-                shape.setCenterX(x);
-                shape.setCenterY(y);
+	public int remaining() {
+		int count = 0;
+		for (int i = 0; i < _eggs.length; i++) {
+			if (_eggs[i] != null) {
+				count++;
+			}
+		}
+		return count;
+	}
 
-                eggs.getChildren().add(shape);
-            }
-        }
+	public Group getShapes() {
+		Group eggs = new Group();
 
-        return eggs;
-    }
+		for (int i = 0; i < _eggs.length; i++) {
+			if (_eggs[i] != null) {
+				Circle shape = _eggs[i].getShape();
+				double x = (i) * (2 * shape.getRadius() + 10.0);
+				double y = 0.0;
+				shape.setCenterX(x);
+				shape.setCenterY(y);
+
+				eggs.getChildren().add(shape);
+			}
+		}
+
+		return eggs;
+	}
 
 }
