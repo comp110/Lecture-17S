@@ -6,76 +6,81 @@ import javafx.scene.Group;
 
 public class EggRoulette {
 
-    private Carton _eggs;
-    private int[] _scores;
-    private int _turn;
+	private Carton _carton;
+	private int[] _scores;
+	private int _turn;
 
-    public EggRoulette(int players) {
-        _scores = new int[players];
-        _turn = 0;
-        this.initializeEggs();
-    }
+	public EggRoulette(int players) {
+		_scores = new int[players];
+		_turn = 0;
 
-    // Talk about private?
-    private void initializeEggs() {
-        _eggs = new Carton();
+		// TODO #1: Initialize our _carton Field
 
-        for (int i = _eggs.size() / 4; i < _eggs.size(); i++) {
-            Egg selected = _eggs.takeEgg(i);
-            selected.boil();
-            _eggs.setEgg(i, selected);
-        }
+		// Boil 3 / 4 of the eggs
+		for (int i = _carton.size() / 4; i < _carton.size(); i++) {
+			Egg selected = _carton.takeEgg(i);
+			selected.boil();
+			_carton.setEgg(i, selected);
+		}
 
-        Random random = new Random();
-        for (int i = 0; i < _eggs.size(); i++) {
-            int a = random.nextInt(_eggs.size());
-            int b = random.nextInt(_eggs.size());
-            Egg temp = _eggs.takeEgg(a);
-            _eggs.setEgg(a, _eggs.takeEgg(b));
-            _eggs.setEgg(b, temp);
-        }
-    }
+		// Shuffle our Eggs
+		this.shuffleEggs();
 
-    public Egg pick(int index) {
-        Egg selected = _eggs.takeEgg(index);
-        if (selected != null) {
-            if (selected.isRaw()) {
-                _scores[this.getPlayer()]++;
-            }
-        }
-        _turn++;
-        return selected;
-    }
+	}
 
-    public int getPlayer() {
-        return _turn % _scores.length;
-    }
+	public void shuffleEggs() {
+		Random random = new Random();
+		for (int i = 0; i < _carton.size(); i++) {
+			int a = random.nextInt(_carton.size());
+			int b = random.nextInt(_carton.size());
+			// TODO: Swap the eggs at indices a and b
+			// Hint: You will need a temporary variable
+			// Make use of:
+			// 1. _carton.takeEgg( <index> )
+			// 2. _carton.setEgg( <index>, <Egg> )
+		}
+	}
 
-    public boolean isGameOver() {
+	public Egg pick(int index) {
+		Egg selected = _carton.takeEgg(index);
+		if (selected != null) {
+			if (selected.isRaw()) {
+				_scores[this.getPlayer()]++;
+			}
+		}
+		_turn++;
+		return selected;
+	}
 
-        if (_eggs.remaining() <= 0) {
-            return true;
-        }
+	public int getPlayer() {
+		return _turn % _scores.length;
+	}
 
-        for (int i = 0; i < _scores.length; i++) {
-            if (_scores[i] >= 2) {
-                return true;
-            }
-        }
-        return false;
-    }
+	public boolean isGameOver() {
 
-    public int getLoser() {
-        for (int i = 0; i < _scores.length; i++) {
-            if (_scores[i] >= 2) {
-                return i;
-            }
-        }
-        return -1;
-    }
+		if (_carton.remaining() <= 0) {
+			return true;
+		}
 
-    public Group getShapes() {
-        return _eggs.getShapes();
-    }
+		for (int i = 0; i < _scores.length; i++) {
+			if (_scores[i] >= 2) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public int getLoser() {
+		for (int i = 0; i < _scores.length; i++) {
+			if (_scores[i] >= 2) {
+				return i;
+			}
+		}
+		return -1;
+	}
+
+	public Group getShapes() {
+		return _carton.getShapes();
+	}
 
 }
