@@ -4,6 +4,7 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 		Palindrome palindrome = new Palindrome();
+		// TODO: Change the string we pass to make
 		System.out.println(palindrome.make("a"));
 	}
 
