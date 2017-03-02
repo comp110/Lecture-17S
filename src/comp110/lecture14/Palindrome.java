@@ -4,7 +4,7 @@ public class Palindrome {
 
 	public static void main(String[] args) {
 		Palindrome palindrome = new Palindrome();
-		System.out.println(palindrome.make("carol"));
+		System.out.println(palindrome.make("a"));
 	}
 
 	// No Fields
