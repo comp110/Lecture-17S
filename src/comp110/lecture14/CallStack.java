@@ -15,14 +15,10 @@ public class CallStack {
 		this.stackOverflow(n + 1);
 	}
 
-	public void baseCase(int n) {
+	public void avoidOverflow(int n) {
 		System.out.println("Stacking... " + n);
 		// TODO: Add a test for our base case...
-		if (n > 0) {
-			this.baseCase(n - 1);
-		} else {
-			System.out.println("Base case!");
-		}
+		this.avoidOverflow(n - 1);
 		System.out.println("Unstacking... " + n);
 	}
 
