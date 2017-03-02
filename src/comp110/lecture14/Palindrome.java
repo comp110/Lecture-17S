@@ -2,23 +2,24 @@ package comp110.lecture14;
 
 public class Palindrome {
 
-    public static void main(String[] args) {
-        Palindrome palindrome = new Palindrome();
-        System.out.println(palindrome.make("ab", 0));
-    }
+	public static void main(String[] args) {
+		Palindrome palindrome = new Palindrome();
+		System.out.println(palindrome.make("carol"));
+	}
 
-    // No Fields
+	// No Fields
 
-    // No Constructor (Same thing as an empty constructor!)
+	// No Constructor (Same thing as an empty constructor!)
 
-    public String make(String in, int i) {
-        if (i == in.length()) {
-            return "";
-        } else {
-            char head = in.charAt(i);
-            String recur = this.make(in, i + 1);
-            return head + recur + head;
-        }
-    }
+	public String make(String input) {
+		if (input.length() <= 1) {
+			return input;
+		} else {
+			char head = input.charAt(0);
+			String tail = input.substring(1, input.length());
+			String recur = this.make(tail);
+			return head + recur + head;
+		}
+	}
 
 }
