@@ -4,6 +4,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
 		<accessrules>
 			<accessrule kind="accessible" pattern="javafx/**"/>
+			<accessrule kind="nonaccessible" pattern="com/sun/**"/>
+			<accessrule kind="nonaccessible" pattern="java/awt/**"/>
+			<accessrule kind="nonaccessible" pattern="javax/swing/**"/>
 		</accessrules>
 	</classpathentry>
 	<classpathentry kind="lib" path="support/comp110.Console.jar"/>
