@@ -6,13 +6,13 @@ public class AudioInterfaceRunner {
 
         Phone myPhone = new Phone();
 
-        myPhone.setDevice(new Headphones());
+        Headphones headphones = new Headphones();
+
+        myPhone.setDevice(headphones);
         myPhone.play("Twenty One Pilots");
 
         Speakers bose = new Speakers();
-        bose.turnOn();
-        myPhone.setDevice(bose);
-        myPhone.play("Bob Marley");
+        // TODO: Play out of the Speakers
 
         // TODO: Pass the AuxCord
 

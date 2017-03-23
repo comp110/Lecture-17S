@@ -22,7 +22,7 @@ public class Speakers implements AudioOutputDevice {
         }
     }
 
-    // Classes which implement interfaces can have other methods, too!
+    // NOTICE: Classes which implement interfaces can have other methods, too!
     public void turnOn() {
         _powered = true;
     }
