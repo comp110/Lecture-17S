@@ -31,7 +31,7 @@ public class BinarySearchSpellChecker implements SpellChecker {
 
 			// 3.2 Make a new guess
 
-			// 3.3 The selected word at index guess
+			// 3.3 The selected word is at index guess
 
 			// 3.4 Compare the word being searched for with the selected word
 
