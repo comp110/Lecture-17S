@@ -10,7 +10,7 @@ public class LiteBriteApp extends Application {
   }
 
   public void start(Stage s) {
-    new GridWindow();
+    new LiteBriteWindow();
   }
 
 }
