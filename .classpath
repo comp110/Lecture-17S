@@ -10,5 +10,6 @@
 		</accessrules>
 	</classpathentry>
 	<classpathentry kind="lib" path="support/comp110.Console.jar"/>
+	<classpathentry kind="lib" path="support/commons-csv-1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
